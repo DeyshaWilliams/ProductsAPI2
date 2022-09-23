@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'corsheaders',
     'Products'
 ]
 
@@ -47,7 +46,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware'
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -121,4 +119,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 try:
     from products_projects.local_settings import *
 except ImportError:
-    raise ImportError("local settings not found")
+    pass
